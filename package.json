@@ -1,0 +1,14 @@
+{
+  "name": "create-particle",
+  "version": "1.0.0",
+  "description": "A script to create a new implementation of the Particle",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "Phase2 Technology",
+    "url": "https://github.com/phase2"
+  },
+  "license": "GPL-2.0"
+}
