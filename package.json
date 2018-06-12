@@ -14,9 +14,7 @@
     "type": "git",
     "url": "git@github.com:phase2/create-particle.git"
   },
-  "bin": {
-    "create-particle": "./index.js"
-  },
+  "bin": "index.js",
   "license": "GPL-2.0",
   "dependencies": {
     "git-clone": "^0.1.0"
