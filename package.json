@@ -1,6 +1,6 @@
 {
   "name": "@phase2/create-particle",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A script to generate a Particle folder",
   "main": "index.js",
   "scripts": {
