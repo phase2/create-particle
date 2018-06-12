@@ -1,4 +1,4 @@
-#!/bin/env node
+#!/usr/bin/env node
 
 const { spawn, spawnSync } = require('child_process');
 const clone = require('git-clone');
