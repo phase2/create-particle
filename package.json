@@ -1,5 +1,5 @@
 {
-  "name": "@particle/create-particle",
+  "name": "@phase2/create-particle",
   "version": "0.0.1",
   "description": "A script to generate a Particle folder",
   "main": "index.js",
