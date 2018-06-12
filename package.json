@@ -10,5 +10,8 @@
     "name": "Phase2 Technology",
     "url": "https://github.com/phase2"
   },
-  "license": "GPL-2.0"
+  "license": "GPL-2.0",
+  "dependencies": {
+    "git-clone": "^0.1.0"
+  }
 }
