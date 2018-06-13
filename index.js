@@ -14,6 +14,28 @@ if (!folder) {
 
 const options = { cwd: folder, stdio: 'inherit' };
 
+/* 
+ * Function fetches the tags off the repository and then pulls
+ * the latest tag, rather than the current HEAD of master.
+ */
+
+const checkoutLatestTag = () => {
+  console.log('Checking out latest tag');
+  spawnSync('git', ['fetch', '--tags'], options);
+  const pullTag = spawnSync('git', ['rev-list', '--tags', '--max-count=1'], {
+    cwd: folder,
+  });
+  const tagHash = pullTag.output[1].toString('utf8');
+  console.log(tagHash);
+  const describeTag = spawnSync(
+    'git',
+    ['describe', '--tags', tagHash],
+    options,
+  );
+  // const tagName = describeTag.output[1].toString('utf8');
+  console.log(describeTag.output);
+};
+
 /*
  * npm commands must be run synchronously.
  * `npm run setup` utilizes dependencies initialized with `npm install`
@@ -28,4 +50,4 @@ const setupParticle = () => {
 };
 
 console.log('Cloning Particle repo...');
-clone('https://github.com/phase2/particle', folder, {}, setupParticle);
+clone('https://github.com/phase2/particle', folder, {}, checkoutLatestTag);
