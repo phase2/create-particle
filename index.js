@@ -3,7 +3,7 @@
 const { spawn, spawnSync } = require('child_process');
 const clone = require('git-clone');
 
-// Run script via `npx create-particle <folder-name>`
+// Run script via `npx phase2/create-particle <folder-name>`
 const folder = process.argv.slice(2)[0];
 
 // Exit from the process if no folder argument is passed
